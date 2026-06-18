@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Check-in da Aula</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input, button { padding: 10px; font-size: 16px; margin: 10px; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Entrada na Aula</h2>
+    <p>Insira seu e-mail @escola para registrar sua presença:</p>
+    <input type="email" id="emailAluno" placeholder="exemplo@escola.pr.gov.br" required>
+    <br>
+    <button onclick="fazerCheckIn()">Registrar Presença</button>
+
+    <script>
+        function fazerCheckIn() {
+            const email = document.getElementById('emailAluno').value;
+            if(!email.endsWith('@escola.pr.gov.br')) { // Exemplo de validação
+                alert('Por favor, use seu e-mail @escola institucional!');
+                return;
+            }
+            
+            // Aqui entra o código do Firebase para salvar no banco:
+            // db.collection("presencas").add({ email: email, hora: new Date() })
+            
+            alert('Presença registrada com sucesso!');
+        }
+    </script>
+</body>
+</html>
