@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Professor</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .lista-alunos { border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+        .aluno-item { padding: 8px; border-bottom: 1px solid #eee; }
+    </style>
+</head>
+<body>
+    <h2>Alunos Conectados na Aula</h2>
+    <div class="lista-alunos" id="lista">
+        <p>Aguardando alunos entrarem...</p>
+    </div>
+
+    <script>
+        // Código do Firebase para "escutar" a coleção de presenças:
+        // db.collection("presencas").orderBy("hora", "desc")
+        //   .onSnapshot((snapshot) => { 
+        //       // Código para atualizar a div #lista na tela na mesma hora
+        //   });
+    </script>
+</body>
+</html>
